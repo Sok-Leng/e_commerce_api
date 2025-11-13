@@ -1,1 +1,20 @@
-spring.application.name=e_commerce_api
+server:
+  port: 9090
+
+spring:
+  application:
+    name: e-commerce-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:54103/e_commerce_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
